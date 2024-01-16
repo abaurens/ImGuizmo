@@ -13,14 +13,19 @@ project "ImGuizmo"
   IncludeDir["imguizmo"] = "%{wks.location}/libs/imguizmo"
 
   includedirs {
+    "%{IncludeDir.imgui}",
     "%{IncludeDir.imguizmo}",
   }
 
   files {
     "premake5.lua",
 
-    "**.h",
-    "**.cpp"
+    "ImZoomSlider.h",
+    "ImGuizmo.h",    "ImGuizmo.cpp",
+    "ImGradient.h",  "ImGradient.cpp",
+    "GraphEditor.h", "GraphEditor.cpp",
+    "ImCurveEdit.h", "ImCurveEdit.cpp",
+    "ImSequencer.h", "ImSequencer.cpp",
   }
 
   filter "system:windows"
